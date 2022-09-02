@@ -2,11 +2,14 @@ package com.anbn.pinout;
 
 import static com.anbn.pinout.MainActivity.url;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.DownloadListener;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -15,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class WebViewActivity extends AppCompatActivity {
 
-    WebView web;
+    WebView webView;
 
     // нарисуем экран
     @Override
@@ -26,11 +29,14 @@ public class WebViewActivity extends AppCompatActivity {
         // для стрелки назад в ActionBar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        web = findViewById(R.id.webView);
-        WebSettings webSettings = web.getSettings();
+        // загрузка файла pdf и отображение его в WebView
+        webView = findViewById(R.id.webView);
+        WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        web.setWebViewClient(new Callback());
-        web.loadUrl(url);
+
+        webView.setWebViewClient(new Callback());
+        webView.loadUrl(url);
+
     }
 
     // для стрелки назад в ActionBar

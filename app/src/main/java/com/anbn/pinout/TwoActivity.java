@@ -1,16 +1,8 @@
 package com.anbn.pinout;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
-import android.app.DownloadManager;
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,8 +13,6 @@ import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
-
-import java.io.File;
 
 import static com.anbn.pinout.MainActivity.card;
 import static com.anbn.pinout.MainActivity.equip;
@@ -57,61 +47,61 @@ public class TwoActivity extends AppCompatActivity {
         // укажем имя папки в assets 01_smk30mux
         if (equip == 1) {
             folder = "01_smk30mux";
-            file_name = StaticVariables.CARD1[card] + ".pdf";
+            file_name = StaticVariablesOffLine.CARD1[card] + ".pdf";
         }
 
         // укажем имя папки в assets 02_smk30ks
         if (equip == 2) {
             folder = "02_smk30ks";
-            file_name = StaticVariables.CARD2[card] + ".pdf";
+            file_name = StaticVariablesOffLine.CARD2[card] + ".pdf";
         }
 
         // укажем имя папки в assets 03_mdk
         if (equip == 3) {
             folder = "03_mdk";
-            file_name = StaticVariables.CARD3[card] + ".pdf";
+            file_name = StaticVariablesOffLine.CARD3[card] + ".pdf";
         }
 
         // укажем имя папки в assets 04_rlsm10_40
         if (equip == 4) {
             folder = "04_rlsm10_40";
-            file_name = StaticVariables.CARD4[card] + ".pdf";
+            file_name = StaticVariablesOffLine.CARD4[card] + ".pdf";
         }
 
         // укажем имя папки в assets 05_psgo
         if (equip == 5) {
             folder = "05_psgo";
-            file_name = StaticVariables.CARD5[card] + ".pdf";
+            file_name = StaticVariablesOffLine.CARD5[card] + ".pdf";
         }
 
         // укажем имя папки в assets 06_difrent_pulsar
         if (equip == 6) {
             folder = "06_difrent_pulsar";
-            file_name = StaticVariables.CARD6[card] + ".pdf";
+            file_name = StaticVariablesOffLine.CARD6[card] + ".pdf";
         }
 
         // укажем имя папки в assets 07_ECI
         if (equip == 7) {
             folder = "07_ECI";
-            file_name = StaticVariables.CARD7[card] + ".pdf";
+            file_name = StaticVariablesOffLine.CARD7[card] + ".pdf";
         }
 
         // укажем имя папки в assets 08_cisco
         if (equip == 8) {
             folder = "08_cisco";
-            file_name = StaticVariables.CARD8[card] + ".pdf";
+            file_name = StaticVariablesOffLine.CARD8[card] + ".pdf";
         }
 
         // укажем имя папки в assets 09_cable
         if (equip == 9) {
             folder = "09_cable";
-            file_name = StaticVariables.CARD9[card] + ".pdf";
+            file_name = StaticVariablesOffLine.CARD9[card] + ".pdf";
         }
 
         // укажем имя папки в assets 10_DX500
         if (equip == 10) {
             folder = "10_DX500";
-            file_name = StaticVariables.CARD10[card] + ".pdf";
+            file_name = StaticVariablesOffLine.CARD10[card] + ".pdf";
         }
 
         // найдем путь к файлу

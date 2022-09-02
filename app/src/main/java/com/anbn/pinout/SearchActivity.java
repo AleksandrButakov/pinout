@@ -73,11 +73,11 @@ public class SearchActivity extends AppCompatActivity {
                     card = 1;
                     try {
 
-                        while (StaticVariables.CARD1[i] != null) {
+                        while (StaticVariablesOffLine.CARD1[i] != null) {
                             // ищем соответствие поиска в массиве
-                            cardUpper = StaticVariables.CARD1[i].toUpperCase();
+                            cardUpper = StaticVariablesOffLine.CARD1[i].toUpperCase();
                             if (cardUpper.indexOf(sSearchUpper) != -1) {
-                                ArraySearch(StaticVariables.CARD1[i], card, i);
+                                ArraySearch(StaticVariablesOffLine.CARD1[i], card, i);
                             }
                             i++;
                         }
@@ -92,11 +92,11 @@ public class SearchActivity extends AppCompatActivity {
                     card = 2;
                     try {
 
-                        while (StaticVariables.CARD2[i] != null) {
+                        while (StaticVariablesOffLine.CARD2[i] != null) {
                             // ищем соответствие поиска в массиве
-                            cardUpper = StaticVariables.CARD2[i].toUpperCase();
+                            cardUpper = StaticVariablesOffLine.CARD2[i].toUpperCase();
                             if (cardUpper.indexOf(sSearchUpper) != -1) {
-                                ArraySearch(StaticVariables.CARD2[i], card, i);
+                                ArraySearch(StaticVariablesOffLine.CARD2[i], card, i);
                             }
                             i++;
                         }
@@ -111,11 +111,11 @@ public class SearchActivity extends AppCompatActivity {
                     card = 3;
                     try {
 
-                        while (StaticVariables.CARD3[i] != null) {
+                        while (StaticVariablesOffLine.CARD3[i] != null) {
                             // ищем соответствие поиска в массиве
-                            cardUpper = StaticVariables.CARD3[i].toUpperCase();
+                            cardUpper = StaticVariablesOffLine.CARD3[i].toUpperCase();
                             if (cardUpper.indexOf(sSearchUpper) != -1) {
-                                ArraySearch(StaticVariables.CARD3[i], card, i);
+                                ArraySearch(StaticVariablesOffLine.CARD3[i], card, i);
                             }
                             i++;
                         }
@@ -130,11 +130,11 @@ public class SearchActivity extends AppCompatActivity {
                     card = 4;
                     try {
 
-                        while (StaticVariables.CARD4[i] != null) {
+                        while (StaticVariablesOffLine.CARD4[i] != null) {
                             // ищем соответствие поиска в массиве
-                            cardUpper = StaticVariables.CARD4[i].toUpperCase();
+                            cardUpper = StaticVariablesOffLine.CARD4[i].toUpperCase();
                             if (cardUpper.indexOf(sSearchUpper) != -1) {
-                                ArraySearch(StaticVariables.CARD4[i], card, i);
+                                ArraySearch(StaticVariablesOffLine.CARD4[i], card, i);
                             }
                             i++;
                         }
@@ -149,11 +149,11 @@ public class SearchActivity extends AppCompatActivity {
                     card = 5;
                     try {
 
-                        while (StaticVariables.CARD5[i] != null) {
+                        while (StaticVariablesOffLine.CARD5[i] != null) {
                             // ищем соответствие поиска в массиве
-                            cardUpper = StaticVariables.CARD5[i].toUpperCase();
+                            cardUpper = StaticVariablesOffLine.CARD5[i].toUpperCase();
                             if (cardUpper.indexOf(sSearchUpper) != -1) {
-                                ArraySearch(StaticVariables.CARD5[i], card, i);
+                                ArraySearch(StaticVariablesOffLine.CARD5[i], card, i);
                             }
                             i++;
                         }
@@ -168,11 +168,11 @@ public class SearchActivity extends AppCompatActivity {
                     card = 6;
                     try {
 
-                        while (StaticVariables.CARD6[i] != null) {
+                        while (StaticVariablesOffLine.CARD6[i] != null) {
                             // ищем соответствие поиска в массиве
-                            cardUpper = StaticVariables.CARD6[i].toUpperCase();
+                            cardUpper = StaticVariablesOffLine.CARD6[i].toUpperCase();
                             if (cardUpper.indexOf(sSearchUpper) != -1) {
-                                ArraySearch(StaticVariables.CARD6[i], card, i);
+                                ArraySearch(StaticVariablesOffLine.CARD6[i], card, i);
                             }
                             i++;
                         }
@@ -187,11 +187,11 @@ public class SearchActivity extends AppCompatActivity {
                     card = 7;
                     try {
 
-                        while (StaticVariables.CARD7[i] != null) {
+                        while (StaticVariablesOffLine.CARD7[i] != null) {
                             // ищем соответствие поиска в массиве
-                            cardUpper = StaticVariables.CARD7[i].toUpperCase();
+                            cardUpper = StaticVariablesOffLine.CARD7[i].toUpperCase();
                             if (cardUpper.indexOf(sSearchUpper) != -1) {
-                                ArraySearch(StaticVariables.CARD7[i], card, i);
+                                ArraySearch(StaticVariablesOffLine.CARD7[i], card, i);
                             }
                             i++;
                         }
@@ -206,11 +206,11 @@ public class SearchActivity extends AppCompatActivity {
                     card = 8;
                     try {
 
-                        while (StaticVariables.CARD8[i] != null) {
+                        while (StaticVariablesOffLine.CARD8[i] != null) {
                             // ищем соответствие поиска в массиве
-                            cardUpper = StaticVariables.CARD8[i].toUpperCase();
+                            cardUpper = StaticVariablesOffLine.CARD8[i].toUpperCase();
                             if (cardUpper.indexOf(sSearchUpper) != -1) {
-                                ArraySearch(StaticVariables.CARD8[i], card, i);
+                                ArraySearch(StaticVariablesOffLine.CARD8[i], card, i);
                             }
                             i++;
                         }
@@ -225,11 +225,11 @@ public class SearchActivity extends AppCompatActivity {
                     card = 9;
                     try {
 
-                        while (StaticVariables.CARD9[i] != null) {
+                        while (StaticVariablesOffLine.CARD9[i] != null) {
                             // ищем соответствие поиска в массиве
-                            cardUpper = StaticVariables.CARD9[i].toUpperCase();
+                            cardUpper = StaticVariablesOffLine.CARD9[i].toUpperCase();
                             if (cardUpper.indexOf(sSearchUpper) != -1) {
-                                ArraySearch(StaticVariables.CARD9[i], card, i);
+                                ArraySearch(StaticVariablesOffLine.CARD9[i], card, i);
                             }
                             i++;
                         }
@@ -244,11 +244,11 @@ public class SearchActivity extends AppCompatActivity {
                     card = 10;
                     try {
 
-                        while (StaticVariables.CARD10[i] != null) {
+                        while (StaticVariablesOffLine.CARD10[i] != null) {
                             // ищем соответствие поиска в массиве
-                            cardUpper = StaticVariables.CARD10[i].toUpperCase();
+                            cardUpper = StaticVariablesOffLine.CARD10[i].toUpperCase();
                             if (cardUpper.indexOf(sSearchUpper) != -1) {
-                                ArraySearch(StaticVariables.CARD10[i], card, i);
+                                ArraySearch(StaticVariablesOffLine.CARD10[i], card, i);
                             }
                             i++;
                         }
@@ -391,7 +391,7 @@ public class SearchActivity extends AppCompatActivity {
         } else {
             equipmentValue = tempEquipmentValue;
             // нашли соответствие. Добавляем результат в массив
-            s = equipmentValue + ". " + StaticVariables.SEQUIPMENT[equipmentValue];
+            s = equipmentValue + ". " + StaticVariablesOffLine.SEQUIPMENT[equipmentValue];
             listCardArray.add(s);
             number++;
             s = "   " + equipmentValue + "." + i + ". " + sCARD;
