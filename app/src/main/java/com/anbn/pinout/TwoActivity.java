@@ -25,8 +25,8 @@ public class TwoActivity extends AppCompatActivity {
     private Button next, previous;
 
     private static final int WRITE_EXTERNAL_STORAGE = 1;
-    private String link = "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=" +
-            "1c6v46vgYnRSR4n54veKgC4oAVusmpjlz";
+    // private String link = "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=" +
+    // "1c6v46vgYnRSR4n54veKgC4oAVusmpjlz";
 
     // нарисуем экран
     @Override
