@@ -15,6 +15,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class WebViewActivity extends AppCompatActivity {
 

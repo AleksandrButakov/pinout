@@ -15,6 +15,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class SearchActivity extends AppCompatActivity {
 
