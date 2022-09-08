@@ -24,6 +24,10 @@ public class WebViewActivity extends AppCompatActivity {
     // нарисуем экран
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // запретим ночную тему
+        setTheme(AppCompatDelegate.MODE_NIGHT_NO);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
 
