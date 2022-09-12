@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Pinout" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        -->
+        <!--
+        <item name="colorAccent">@color/colorAccent</item>
+        -->
+        <!-- здадим высоту ActionBar -->
+        <item name="android:actionBarSize">45dp</item>
+    </style>
+
+    <!--
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/actionbar_background</item>
+        <item name="android:titleTextStyle">@style/MyTextAppearance</item>
+    </style>
+    -->
+
+    <!--
+    <style name="MyTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/actionbar_text_color</item>
+    </style>
+    -->
+
+</resources>
