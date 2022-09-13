@@ -35,7 +35,6 @@ app/src/main/res/layout/activity_main.xml
 app/src/main/res/layout/activity_two.xml
 
 app/src/main/res/values/strings.xml
-app/src/main/res/values/styles.xml
 
 app/src/test/
 build-scan-data/
