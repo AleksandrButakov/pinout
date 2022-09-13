@@ -4,15 +4,16 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:textColorPrimary">@color/colorWhite</item>
-        <item name="android:textColorSecondary">@color/colorBlack</item>
         <item name="android:textColor">@color/colorBlack</item>
-        <!-- здадим высоту ActionBar -->
+        <item name="android:textColorPrimary">@color/colorWhite</item>
         <item name="android:actionBarSize">45dp</item>
     </style>
 
-    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">@color/actionbar_background</item>
+    <!--
+    Тема для поля SearchView
+    -->
+    <style name="AppThemeSearchView">
+        <item name="android:textColorPrimary">@color/colorBlack</item>
     </style>
 
 </resources>

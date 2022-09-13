@@ -2,11 +2,7 @@
 <resources>
     <color name="colorPrimary">#FF9800</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#03DAC5</color>
-
     <color name="actionbar_background">#FFFFFF</color>
-    <color name="actionbar_text_color">#005550</color>
-
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
 
