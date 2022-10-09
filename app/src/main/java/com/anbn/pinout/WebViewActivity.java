@@ -69,7 +69,6 @@ public class WebViewActivity extends AppCompatActivity {
             return false;
         }
 
-
     }
 
 
