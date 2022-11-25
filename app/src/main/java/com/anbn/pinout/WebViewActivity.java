@@ -18,7 +18,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 public class WebViewActivity extends AppCompatActivity {
-
     WebView webView;
 
     // нарисуем экран
@@ -70,7 +69,6 @@ public class WebViewActivity extends AppCompatActivity {
         }
 
     }
-
 
 }
 
