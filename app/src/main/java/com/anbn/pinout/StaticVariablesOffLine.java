@@ -19,7 +19,8 @@ public class StaticVariablesOffLine {
             "ECI Telecom (NPT, CWDM, DWDM)",
             "Оборудование Cisco, ВСТСПД",
             "Кабели для настройки устройств",
-            "DX-500"};
+            "DX-500",
+            "Волоконно-оптические кабели"};
 
     //  Платы оборудования СМК-30 MUX
     public static final String[] CARD1 = {
@@ -148,12 +149,16 @@ public class StaticVariablesOffLine {
     // Кабели для настройки устройств
     public static final String[] CARD9 = {
             "Выберите тип кабеля ...",
-            "Кабели для настройки устройств",
-            "Оптические коннекторы"};
+            "Кабели для настройки устройств"};
 
     // Оборудование DX500
     public static final String[] CARD10 = {
             "Выберите оборудование ...",
             "DX-500 подключение интерфейсов"};
+
+    // Волоконно-оптические кабели
+    public static final String[] CARD11 = {
+            "Выберите оборудование ...",
+            "Оптические коннекторы"};
 
 }

@@ -17,6 +17,12 @@
     <item
         android:id="@+id/action_item3"
         android:orderInCategory="3"
+        android:title="Оценить приложение"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item4"
+        android:orderInCategory="4"
         android:title="О программе"
         app:showAsAction="never" />
 
