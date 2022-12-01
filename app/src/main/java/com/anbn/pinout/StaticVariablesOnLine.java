@@ -6,7 +6,7 @@ public class StaticVariablesOnLine {
     public static final String[] SEQUIPMENT = {
             "Выберите оборудование...",
             "Cisco Systems",
-            "DX500",
+            "Оборудование DX500",
             "ECI Telecom"};
 
     //  Оборудование Cisco Systems

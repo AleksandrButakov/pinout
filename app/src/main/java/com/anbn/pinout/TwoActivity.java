@@ -105,6 +105,13 @@ public class TwoActivity extends AppCompatActivity {
             file_name = StaticVariablesOffLine.CARD10[card] + ".pdf";
         }
 
+        // укажем имя папки в assets 11_optical_cable
+        if (equip == 11) {
+            folder = "11_optical_cable";
+            file_name = StaticVariablesOffLine.CARD11[card] + ".pdf";
+        }
+
+
         // найдем путь к файлу
         path = folder + "/" + file_name;// + ".pdf";
 

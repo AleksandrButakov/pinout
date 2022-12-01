@@ -259,6 +259,25 @@ public class SearchActivity extends AppCompatActivity {
                     // присвоим i = 1 для дальнейшего поиска
                     i = 1;
 
+                    //CADR11[]
+                    // конструкцию проверим на исключения
+                    card = 11;
+                    try {
+
+                        while (StaticVariablesOffLine.CARD11[i] != null) {
+                            // ищем соответствие поиска в массиве
+                            cardUpper = StaticVariablesOffLine.CARD11[i].toUpperCase();
+                            if (cardUpper.indexOf(sSearchUpper) != -1) {
+                                ArraySearch(StaticVariablesOffLine.CARD11[i], card, i);
+                            }
+                            i++;
+                        }
+                    } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+                        System.out.println(e.getMessage());
+                    }
+                    // присвоим i = 1 для дальнейшего поиска
+                    i = 1;
+
                     // выведем результаты поиска в ListView
                     SearchResultsDisplay();
                 } else {
