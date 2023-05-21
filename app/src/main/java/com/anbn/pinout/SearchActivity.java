@@ -50,6 +50,16 @@ public class SearchActivity extends AppCompatActivity {
         // зададим идентификаторы полю searchView
         // создадим listner searchView1
         final SearchView searchView1 = (SearchView) findViewById(R.id.searchView1);
+
+        /* блок необходим чтобы клик воспринимался любой частью поля, а не только
+           увеличительным стеклом */
+        searchView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                searchView1.setIconified(false);
+            }
+        });
+
         searchView1.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             // обработчик нажатия кнопки поиска поля searchView1
             @Override
@@ -57,6 +67,7 @@ public class SearchActivity extends AppCompatActivity {
                 // User pressed the search button
                 return false;
             }
+
             // обработчик ввода символа поля searchView1
             @Override
             public boolean onQueryTextChange(String sSearch) {
@@ -310,8 +321,8 @@ public class SearchActivity extends AppCompatActivity {
                 sSelectedPosition = ((TextView) itemClicked).getText().toString();
 
                 /* формат записи ___1.4. СМК-30... необходимо первый разряд присвоить переменной
-                *  equip, второе переменной card. Если это категория оборудования с одним числом
-                *  то вывести Toast с информацией о необходимости выбора оборудования */
+                 *  equip, второе переменной card. Если это категория оборудования с одним числом
+                 *  то вывести Toast с информацией о необходимости выбора оборудования */
 
                 //Toast.makeText(getApplicationContext(), sSelectedPosition,
                 //        Toast.LENGTH_SHORT).show();
@@ -333,10 +344,11 @@ public class SearchActivity extends AppCompatActivity {
                     // получим значение из ___14.234._ equip = 14, card = 234
                     MainActivity.equip = 0;
                     MainActivity.card = 0;
-                    sSP1 = ""; sSP2 = "";
+                    sSP1 = "";
+                    sSP2 = "";
                     number = 1;
-                    for (i=3; i<=14; i++) {
-                        s = sSelectedPosition.substring(i, i+1);
+                    for (i = 3; i <= 14; i++) {
+                        s = sSelectedPosition.substring(i, i + 1);
                         if (number == 1 && !s.equals(".")) {
                             if (s.equals("0") || s.equals("1") || s.equals("2") || s.equals("3") ||
                                     s.equals("4") || s.equals("5") || s.equals("6") ||
@@ -400,7 +412,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     // метод вывода результата поиска в ListView
-    public void ArraySearch (String sCARD, int tempEquipmentValue, int i) {
+    public void ArraySearch(String sCARD, int tempEquipmentValue, int i) {
         bSearch = true;
         if (equipmentValue == tempEquipmentValue) {
             // нашли соответствие. Данная категория оборудования уже
@@ -421,7 +433,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     // очистка содержимого в ListView
-    public void ListViewClear () {
+    public void ListViewClear() {
         // получаем экземпляр элемента ListView
         ListView listView = findViewById(R.id.listView);
         // очистим listArray для дальнейшей очистки массива
@@ -433,7 +445,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     // вывод результатов поиска в ListView
-    public void SearchResultsDisplay () {
+    public void SearchResultsDisplay() {
         // получаем экземпляр элемента ListView
         ListView listView = findViewById(R.id.listView);
         // используем адаптер данных
@@ -442,13 +454,13 @@ public class SearchActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 
-    public void DisplayDescription () {
+    public void DisplayDescription() {
         Intent intent = new Intent(this, TwoActivity.class);
         startActivity(intent);
     }
 
     // метод нажатия на кнопку возврата на предыдущий layout
-    public void OnClickButtonSearchBack (View v) {
+    public void OnClickButtonSearchBack(View v) {
         //Intent intent = new  Intent(this, MainActivity.class);
         //startActivity(MainActivity.class);
         onBackPressed();
