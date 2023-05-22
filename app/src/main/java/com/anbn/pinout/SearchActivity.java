@@ -20,9 +20,8 @@ import androidx.appcompat.app.AppCompatDelegate;
 public class SearchActivity extends AppCompatActivity {
 
     /* алгоритм работает следующим образом. Кликаем в TextView, возвращаем номер выбранной строки.
-    По номеру строки находим в массиве индексы оборудования и платы, описание которого и выводим
-    в pdfViewer.
-     */
+     * По номеру строки находим в массиве индексы оборудования и платы, описание которого и выводим
+     * в pdfViewer */
     // card нужен для заполнения значения карты в массиве
     int card = 0;
     public int equipmentValue = 0; // индекс текущего значения поля equipment
@@ -46,9 +45,9 @@ public class SearchActivity extends AppCompatActivity {
         // для стрелки назад в ActionBar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // поиск содержимого по строке введенной в searchView
-        // зададим идентификаторы полю searchView
-        // создадим listner searchView1
+        /* поиск содержимого по строке введенной в searchView
+         * зададим идентификаторы полю searchView
+         * создадим listner searchView1 */
         final SearchView searchView1 = (SearchView) findViewById(R.id.searchView1);
 
         /* блок необходим чтобы клик воспринимался любой частью поля, а не только
@@ -306,8 +305,8 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
-        // метод прослушивания нажатий на ListView (выбор нужной позиции и отображение описания)
-        // отображение происходит в классе TwoActivity.java
+        /* метод прослушивания нажатий на ListView (выбор нужной позиции и отображение описания)
+         * отображение происходит в классе TwoActivity.java */
         ListView listView = findViewById(R.id.listView);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
