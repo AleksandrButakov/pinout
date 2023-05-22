@@ -36,7 +36,6 @@ app/src/main/res/layout/activity_two.xml
 
 app/src/main/res/values/strings.xml
 
-app/src/test/
 build-scan-data/
 caches/
 daemon/
