@@ -8,6 +8,7 @@ public class StaticVariablesOffLine {
     3. Радиостанции РЛСМ-10-ХХ
     4. МДК-ХХ", "ПСГО (ЦИСОП, ППУ
     5. Прочее оборудование Пульсар     */
+
     public static final String[] SEQUIPMENT = {
             "Выберите оборудование...",
             "СМК-30 MUX",
