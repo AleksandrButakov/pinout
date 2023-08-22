@@ -143,7 +143,7 @@ public class StaticVariablesOffLine {
             "RJ-45 connector Ethernet",
             "RJ-45 Eth, E1. RJ-11 SHDLS Line, (RJ45, RJ11)",
             "SFP_module",
-            "Оборудование ВСТСПД",
+            // "Оборудование ВСТСПД",
             "ASR-920-12_CWDM_ODF",
             "ASR-920 and ASR-9001"};
 
