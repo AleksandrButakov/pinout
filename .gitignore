@@ -53,3 +53,4 @@ various_files/
 app/build/intermediates/apk/debug/app-debug.apk
 
 app/src/main/res/drawable/picture_background.jpg
+/app/src/main/res/drawable/icon_chat.png

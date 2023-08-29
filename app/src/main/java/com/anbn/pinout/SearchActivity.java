@@ -47,7 +47,7 @@ public class SearchActivity extends AppCompatActivity {
 
         /* поиск содержимого по строке введенной в searchView
          * зададим идентификаторы полю searchView
-         * создадим listner searchView1 */
+         * создадим listener searchView1 */
         final SearchView searchView1 = (SearchView) findViewById(R.id.searchView1);
 
         /* блок необходим чтобы клик воспринимался любой частью поля, а не только
