@@ -15,29 +15,36 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:gravity="center"
-        android:text="Для поиска необходимого оборудования, модуля или интерфейсной платы начните вводить название"
+        android:text="Нет нужного описания или схемы? Напишите пожалуйста подробно, какой документации не хватает..."
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SearchView
-        android:id="@+id/searchView1"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="14dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/search_shape"
-        android:elevation="8dp"
-        android:theme="@style/AppThemeSearchView"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
-        app:showAsAction="collapseActionView|ifRoom" />
-
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
