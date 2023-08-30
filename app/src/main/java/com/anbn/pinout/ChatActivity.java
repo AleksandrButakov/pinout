@@ -3,6 +3,10 @@ package com.anbn.pinout;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +21,19 @@ public class ChatActivity extends AppCompatActivity {
         // для стрелки назад в ActionBar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // add animation on the button
+        final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.button_fading);
+
+        // click imageButton btnSend
+        ImageButton btnSend = findViewById(R.id.btnSend);
+        btnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // adding animation of the button when pressed
+                view.startAnimation(animAlpha);
+                //openingChatActivity();
+            }
+        });
 
     }
 
