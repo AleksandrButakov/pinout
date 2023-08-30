@@ -9,12 +9,18 @@
     <TextView
         android:id="@+id/textView1"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
+        android:background="@drawable/edit_text_shape"
+
+        android:elevation="2dp"
+
         android:gravity="center"
-        android:text="Нет нужного описания или схемы? Напишите пожалуйста подробно, какую документацию хотелось бы видеть..."
+        android:includeFontPadding="false"
+        android:padding="10dp"
+        android:text="Нет нужного описания или схемы? Напишите пожалуйста подробно какую документацию хотелось бы видеть..."
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,31 +29,40 @@
 
     <EditText
         android:id="@+id/editTextText"
+
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="10dp"
-
         android:background="@drawable/edit_text_shape"
-        android:ems="10"
-        android:textSize="16sp"
+        android:elevation="2dp"
+        android:gravity="fill_horizontal"
 
-        android:textAlignment="viewStart"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="16dp"
+        android:text="Хотелось бы видеть описания NPT и другие, в том числе скачивание описаний для внутреннего использования."
+        android:textAlignment="gravity"
+        android:textColor="@color/colorBlack"
         android:textColorHint="@color/colorBlack"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <ImageButton
         android:id="@+id/btnSend"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="14dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="26dp"
+
         android:background="#00FFFFFF"
         android:scaleType="centerInside"
-        android:src="@drawable/icon_chat"
+        android:src="@drawable/icon_send"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
