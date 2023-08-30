@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,9 +32,12 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // adding animation of the button when pressed
                 view.startAnimation(animAlpha);
-                //openingChatActivity();
+
+                showDialog();
+
             }
         });
+
 
     }
 
@@ -53,5 +57,12 @@ public class ChatActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
     }
+
+
+    public void showDialog() {
+        CustomDialogFragment dialog = new CustomDialogFragment();
+        dialog.show(getSupportFragmentManager(), "Message");
+    }
+
 
 }
