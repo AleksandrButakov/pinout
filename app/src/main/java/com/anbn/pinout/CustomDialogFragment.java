@@ -7,6 +7,9 @@ import android.os.Bundle;
 import androidx.fragment.app.DialogFragment;
 import androidx.annotation.NonNull;
 
+
+// created class for alert dialog
+
 public class CustomDialogFragment extends DialogFragment {
 
     @NonNull
