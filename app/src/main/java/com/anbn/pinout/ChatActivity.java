@@ -1,11 +1,15 @@
 package com.anbn.pinout;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -25,6 +29,7 @@ public class ChatActivity extends AppCompatActivity {
         // add animation on the button
         final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.button_fading);
 
+
         // click imageButton btnSend
         ImageButton btnSend = findViewById(R.id.btnSend);
         btnSend.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +42,35 @@ public class ChatActivity extends AppCompatActivity {
 
             }
         });
+
+
+        // listener for editText
+        EditText editText = (EditText) findViewById(R.id.editText);
+        editText.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                sd(start);
+            }
+        });
+
+
+    }
+
+    public void sd(int count) {
+        //ImageButton imageButton = findViewById(R.id.btnSend);
+        ImageButton btnSend = findViewById(R.id.btnSend);
+        if (count == 0) {
+            btnSend.setImageResource(R.drawable.icon_send_disable);
+            btnSend.setEnabled(false);
+        } else {
+            btnSend.setImageResource(R.drawable.icon_send_enable);
+            btnSend.setEnabled(true);
+        }
 
 
     }
