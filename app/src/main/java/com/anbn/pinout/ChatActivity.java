@@ -62,12 +62,17 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     public void sd(int count) {
-        Toast toast;
-        String s;
-        s = String.valueOf(count);
-        toast = Toast.makeText(this, s, Toast.LENGTH_SHORT);
+        //ImageButton imageButton = findViewById(R.id.btnSend);
+        ImageButton btnSend = findViewById(R.id.btnSend);
+        if (count == 0) {
+            btnSend.setImageResource(R.drawable.icon_send_disable);
+            btnSend.setEnabled(false);
+        } else {
+            btnSend.setImageResource(R.drawable.icon_send_enable);
+            btnSend.setEnabled(true);
+        }
 
-        toast.show();
+
     }
 
     // для стрелки назад в ActionBar
