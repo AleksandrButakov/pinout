@@ -1,7 +1,6 @@
 package com.anbn.pinout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -75,9 +74,9 @@ public class TwoActivity extends AppCompatActivity {
             file_name = StaticVariablesOffLine.CARD5[card] + ".pdf";
         }
 
-        // укажем имя папки в assets 06_difrent_pulsar
+        // укажем имя папки в assets 06_different_pulsar
         if (equip == 6) {
-            folder = "06_difrent_pulsar";
+            folder = "06_different_pulsar";
             file_name = StaticVariablesOffLine.CARD6[card] + ".pdf";
         }
 

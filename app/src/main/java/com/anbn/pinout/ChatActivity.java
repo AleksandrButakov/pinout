@@ -49,7 +49,6 @@ public class ChatActivity extends AppCompatActivity {
 
                 EditText editText = (EditText) findViewById(R.id.editText);
                 editText.setText("");
-
             }
         });
 
@@ -68,7 +67,6 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
     }
-
 
     // button properties depending on the presence of text in editText
     public void SetImageButtonProperty(CharSequence s) {
