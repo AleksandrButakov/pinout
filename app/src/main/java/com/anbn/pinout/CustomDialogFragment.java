@@ -9,9 +9,7 @@ import android.widget.EditText;
 import androidx.fragment.app.DialogFragment;
 import androidx.annotation.NonNull;
 
-
 // created class for alert dialog
-
 public class CustomDialogFragment extends DialogFragment {
 
     @NonNull
