@@ -1,5 +1,10 @@
 package com.anbn.pinout;
 
+import static android.app.PendingIntent.getActivity;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -11,8 +16,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ChatActivity extends AppCompatActivity {
@@ -29,16 +36,19 @@ public class ChatActivity extends AppCompatActivity {
         // add animation on the button
         final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.button_fading);
 
-
         // click imageButton btnSend
         ImageButton btnSend = findViewById(R.id.btnSend);
+        btnSend.setEnabled(false);
+
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // adding animation of the button when pressed
                 view.startAnimation(animAlpha);
-
                 showDialog();
+
+                EditText editText = (EditText) findViewById(R.id.editText);
+                editText.setText("");
 
             }
         });
@@ -54,25 +64,23 @@ public class ChatActivity extends AppCompatActivity {
             }
 
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                sd(start);
+                SetImageButtonProperty(s);
             }
         });
-
-
     }
 
-    public void sd(int count) {
-        //ImageButton imageButton = findViewById(R.id.btnSend);
+
+    // button properties depending on the presence of text in editText
+    public void SetImageButtonProperty(CharSequence s) {
         ImageButton btnSend = findViewById(R.id.btnSend);
-        if (count == 0) {
+        String sText = String.valueOf(s);
+        if (sText.length() == 0) {
             btnSend.setImageResource(R.drawable.icon_send_disable);
             btnSend.setEnabled(false);
         } else {
             btnSend.setImageResource(R.drawable.icon_send_enable);
             btnSend.setEnabled(true);
         }
-
-
     }
 
     // для стрелки назад в ActionBar
@@ -83,7 +91,6 @@ public class ChatActivity extends AppCompatActivity {
                 finish();
                 return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -92,7 +99,7 @@ public class ChatActivity extends AppCompatActivity {
         return true;
     }
 
-
+    // show Alert Dialog on screen
     public void showDialog() {
         CustomDialogFragment dialog = new CustomDialogFragment();
         dialog.show(getSupportFragmentManager(), "Message");
