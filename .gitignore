@@ -57,3 +57,4 @@ app/src/main/res/drawable/picture_background.jpg
 /app/src/main/res/drawable/icon_send.png
 /app/src/main/res/drawable/icon_send_disable.png
 /app/src/main/res/drawable/icon_send_enable.png
+/app/src/main/java/com/anbn/pinout/MySQLConnector.java
