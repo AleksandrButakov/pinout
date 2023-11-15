@@ -4,5 +4,7 @@
     разрешить только зашифрованный трафик
     cleartextTrafficPermitted
     -->
-    <base-config cleartextTrafficPermitted="false" />
+
+        <base-config cleartextTrafficPermitted="false" />
+
 </network-security-config>
