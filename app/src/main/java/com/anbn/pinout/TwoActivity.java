@@ -110,6 +110,24 @@ public class TwoActivity extends AppCompatActivity {
             file_name = StaticVariablesOffLine.CARD11[card] + ".pdf";
         }
 
+        /* TODO добавить Logger
+           TODO проверяю что folder and file_name <> null, выполняю сериализацию
+           TODO если null, выполняю десериализацию,
+         */
+
+//        if (folder.equals("") || file_name.equals("")) {
+//            // выполняем десериализацию
+//
+//            // проверяем что переменные не равны нулю
+//            if (folder.equals("") || file_name.equals("")) {
+//
+//            } else {
+//
+//            }
+//        } else {
+//            // выполняем сериализацию
+//
+//        }
 
         // найдем путь к файлу
         path = folder + "/" + file_name;// + ".pdf";
