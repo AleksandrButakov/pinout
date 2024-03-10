@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
@@ -460,9 +461,16 @@ public class SearchActivity extends AppCompatActivity {
 
     // метод нажатия на кнопку возврата на предыдущий layout
     public void OnClickButtonSearchBack(View v) {
-        //Intent intent = new  Intent(this, MainActivity.class);
+        //Intent intent = new Intent(this, MainActivity.class);
         //startActivity(MainActivity.class);
-        onBackPressed();
+        // возврат на предыдущий activity
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Back is pressed... Finishing the activity
+                finish();
+            }
+        });
     }
 
 }

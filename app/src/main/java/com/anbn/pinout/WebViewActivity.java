@@ -14,6 +14,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
@@ -59,7 +60,13 @@ public class WebViewActivity extends AppCompatActivity {
     // метод нажатия на кнопку
     public void onClickButtonWebViewActivity(View v) {
         // возврат на предыдущий activity
-        onBackPressed();
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Back is pressed... Finishing the activity
+                finish();
+            }
+        });
     }
 
     private class Callback extends WebViewClient {

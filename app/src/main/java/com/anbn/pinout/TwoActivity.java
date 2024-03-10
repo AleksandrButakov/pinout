@@ -1,8 +1,11 @@
 package com.anbn.pinout;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static com.anbn.pinout.MainActivity.card;
+import static com.anbn.pinout.MainActivity.equip;
+import static com.anbn.pinout.StaticVariables.FILE_NAME;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,11 +14,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
 
-import static com.anbn.pinout.MainActivity.card;
-import static com.anbn.pinout.MainActivity.equip;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 // extends AppCompatActivity необходим для загрузки файлов
 public class TwoActivity extends AppCompatActivity {
@@ -23,6 +33,8 @@ public class TwoActivity extends AppCompatActivity {
     private ImageView imageView;
     private int currentPage = 0;
     private Button next, previous;
+    //    public static String path = null;
+    private PathToFile pathToFile;
 
     private static final int WRITE_EXTERNAL_STORAGE = 1;
     // private String link = "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=" +
@@ -33,6 +45,7 @@ public class TwoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
+        File filePath = new File(getExternalFilesDir(null), FILE_NAME);
 
         // для стрелки назад в ActionBar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -42,7 +55,7 @@ public class TwoActivity extends AppCompatActivity {
 
         String folder = "";
         String file_name = "";
-        String path;
+
 
         // укажем имя папки в assets 01_smk30mux
         if (equip == 1) {
@@ -110,16 +123,64 @@ public class TwoActivity extends AppCompatActivity {
             file_name = StaticVariablesOffLine.CARD11[card] + ".pdf";
         }
 
+        Log.i("TwoActivity filename = ", file_name);
 
-        // найдем путь к файлу
-        path = folder + "/" + file_name;// + ".pdf";
+        /* TODO добавить Logger
+           TODO проверяю что folder and file_name <> null, выполняю сериализацию
+           TODO если null, выполняю десериализацию,
+         */
+
+//        if (folder.equals("") || file_name.equals("")) {
+//            // выполняем десериализацию
+//
+//            // проверяем что переменные не равны нулю
+//            if (folder.equals("") || file_name.equals("")) {
+//
+//            } else {
+//
+//            }
+//        } else {
+//            // выполняем сериализацию
+//
+//        }
+
+//        // найдем путь к файлу
+//        path = folder + "/" + file_name;
+
+        Log.i("Before serializable, TwoActivity, filename = ", file_name);
+
+        // TODO
+        if (folder.equals("") || file_name.equals("")) {
+            // Восстановление из файла с помощью класса ObjectInputStream
+            try (ObjectInputStream objectInputStream = new ObjectInputStream(
+                    new FileInputStream(filePath))) {
+                pathToFile = (PathToFile) objectInputStream.readObject();
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            pathToFile.setPathToFile(folder + "/" + file_name);
+            // Сериализация в файл с помощью класса ObjectOutputStream
+            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+                    new FileOutputStream(filePath))) {
+                objectOutputStream.writeObject(pathToFile);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        Log.i("After serializable, TwoActivity, filename = ", file_name);
 
         TextView textView = findViewById(R.id.textView);
         // уберем расширение файла .pdf
         file_name = file_name.substring(0, file_name.length() - 4);
         textView.setText(file_name);
 
-        pdfView.fromAsset(path)
+        pdfView.fromAsset(pathToFile.getPathToFile())
                 //.pages(35) // all pages are displayed by default
                 .enableSwipe(true) // allows to block changing pages using swipe
                 .swipeHorizontal(false)
@@ -129,12 +190,12 @@ public class TwoActivity extends AppCompatActivity {
                 // colors or forms)
                 .password(null)
                 .scrollHandle(null)
-                .enableAntialiasing(true) // improve rendering a little bit on low-res screens
-                // spacing between pages in dp. To define spacing color, set view background
+                .enableAntialiasing(true) // Improve rendering a little on low-res screens
+                // spacing between pages in dp. To define spacing color, set view background.
                 .spacing(0)
                 // screen
                 .pageFitPolicy(FitPolicy.WIDTH) // mode to fit pages in the view
-                // scaled relative to largest page.
+                // scaled about the largest page.
                 .load();
         //}
     }
